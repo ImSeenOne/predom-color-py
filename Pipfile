@@ -9,6 +9,7 @@ scikit-learn = "*"
 sphinx = "*"
 matplotlib = "*"
 pytest = "*"
+pytest-cov = "*"
 
 [dev-packages]
 

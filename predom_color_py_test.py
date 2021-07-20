@@ -1,10 +1,12 @@
 import unittest
 import pytest
 import predom_color_py
+import numpy
 
 
 def test_dominantColors():
-    dc = predom_color_py.DominantColors()
-    expected_value = 30
+    dc = predom_color_py.DominantColors("./scrabble.jpg",5)
 
-    assert expected_value == current_value
+    var = dc.dominantColors()
+
+    assert type(var) == numpy.ndarray
