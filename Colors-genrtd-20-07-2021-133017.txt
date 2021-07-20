@@ -1,0 +1,21 @@
+
+Color #1
+	Name: Cameo
+	Color (HEX): #d8a49d
+	Closest named value (HEX): #D9B99B
+Color #2
+	Name: Coconut
+	Color (HEX): #fdfdfd
+	Closest named value (HEX): #FEFEFE
+Color #3
+	Name: Thunderbird
+	Color (HEX): #b31c19
+	Closest named value (HEX): #C02B18
+Color #4
+	Name: Moonstone
+	Color (HEX): #2c98ba
+	Closest named value (HEX): #3AA8C1
+Color #5
+	Name: Cararra
+	Color (HEX): #e5e6e2
+	Closest named value (HEX): #EEEEE8

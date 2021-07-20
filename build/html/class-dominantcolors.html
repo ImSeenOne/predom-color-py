@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>class DominantColors &#8212; dominant-color-py  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Welcome to dominant-color-py’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="class-dominantcolors">
+<h1>class DominantColors<a class="headerlink" href="#class-dominantcolors" title="Permalink to this headline">¶</a></h1>
+<p>This is basically the heart of the project. This class has the main method where the image is processed by the class KMeans provided by SciKit Learn, a Python Library for Machine Learning.</p>
+<section id="cluster-constant">
+<h2>CLUSTER constant<a class="headerlink" href="#cluster-constant" title="Permalink to this headline">¶</a></h2>
+<p>This is the number of clusters that KMeans will be using while processing the image. Let’s define a cluster like a collection of data aggregated because of certain similarities.</p>
+</section>
+<section id="image-constant">
+<h2>IMAGE constant<a class="headerlink" href="#image-constant" title="Permalink to this headline">¶</a></h2>
+<p>This is just the path to the image to be processed, this is set when the object is instanciated via the constructor.</p>
+</section>
+<section id="colors-constant">
+<h2>COLORS constant<a class="headerlink" href="#colors-constant" title="Permalink to this headline">¶</a></h2>
+<p>This constant is set when the clusters are found after processing the image. In the code, I set clusters centers, which are our dominant colors.</p>
+</section>
+<section id="labels-constant">
+<h2>LABELS constant<a class="headerlink" href="#labels-constant" title="Permalink to this headline">¶</a></h2>
+<p>These labels are set (just like the COLORS constant) right after processing the image and are for future usages, there is not any current useful usage particularly for this project.</p>
+</section>
+<section id="init-image-clusters-3">
+<h2><code class="docutils literal notranslate"><span class="pre">__init__(image,</span> <span class="pre">clusters=3)</span></code><a class="headerlink" href="#init-image-clusters-3" title="Permalink to this headline">¶</a></h2>
+<p>The constructor just sets values to IMAGE and CLUSTERS. In case the clusters are not set, we set it as 3.</p>
+</section>
+<section id="dominantcolors">
+<h2><code class="docutils literal notranslate"><span class="pre">dominantColors()</span></code><a class="headerlink" href="#dominantcolors" title="Permalink to this headline">¶</a></h2>
+<p>The main method. Here is where all the magic happens. Firstly we grab our image and pass it tou our kind friend OpenCV, change the order or the RGB pixels, reshape it to a Python list. Then we start using the SciKit Learn class KMeans to start processing the clusters, and finally we return the colors as RGB integers.</p>
+<p><code class="docutils literal notranslate"><span class="pre">rgb2names(rgb_tuple)</span></code>
+This method is very useful, because the user will know what color it is, but not its name. So I searched on the  internet for an API that gives names to a given HEX/RGB/HSV color, so we can retrieve the name by our given colors.
+So we send the HEX value of a given color and the API gives us a human-readable name.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">dominant-color-py</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">class DominantColors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cluster-constant">CLUSTER constant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-constant">IMAGE constant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#colors-constant">COLORS constant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#labels-constant">LABELS constant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#init-image-clusters-3"><code class="docutils literal notranslate"><span class="pre">__init__(image,</span> <span class="pre">clusters=3)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dominantcolors"><code class="docutils literal notranslate"><span class="pre">dominantColors()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to dominant-color-py’s documentation!</a></li>
+      <li>Next: <a href="installation.html" title="next chapter">Installation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, ImSeenOne.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/class-dominantcolors.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
