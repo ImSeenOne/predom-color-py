@@ -1,10 +1,10 @@
 import unittest
 import pytest
+import predom_color_py
 
-import predom-color-py
 
-def test_sum_happy_path():
-    current_value = my_calc.add(10,20)
+def test_dominantColors():
+    dc = predom_color_py.DominantColors()
     expected_value = 30
 
     assert expected_value == current_value

@@ -22,4 +22,4 @@ deploy:
     branch: main
   provider: script
   script:
-    pipenv run python predom-color-py.py
+    pipenv run python predom_color_py.py
