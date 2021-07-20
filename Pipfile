@@ -8,6 +8,7 @@ opencv-python = "*"
 scikit-learn = "*"
 sphinx = "*"
 matplotlib = "*"
+pytest = "*"
 
 [dev-packages]
 

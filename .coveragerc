@@ -1,0 +1,10 @@
+[report]
+omit =
+    */tests.py
+    */test_*.py
+    */*_tests.py
+
+show_missing=true
+
+exclude_lines =
+    if __name__ == .__main__.:
